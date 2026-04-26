@@ -1,0 +1,34 @@
+.translate-panel { display: flex; flex-direction: column; gap: 16px; }
+
+.translate-warning {
+  background: rgba(251,191,36,0.1);
+  border: 1px solid rgba(251,191,36,0.3);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #fbbf24;
+}
+
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.lang-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 10px; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  cursor: pointer; transition: all 0.2s; text-align: left; font-family: var(--font-body);
+}
+.lang-btn:hover { border-color: var(--border-bright); }
+.lang-btn.active { border-color: var(--accent-green); background: rgba(0,255,135,0.05); }
+.lang-flag { font-size: 18px; flex-shrink: 0; }
+.lang-name { font-size: 12px; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lang-btn.active .lang-name { color: var(--accent-green); }
+
+.translate-action { display: flex; flex-direction: column; gap: 10px; }
+.translate-info { font-size: 13px; color: var(--text-secondary); }
+.translate-info strong { color: var(--text-primary); }

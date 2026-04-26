@@ -1,0 +1,52 @@
+.music-panel { display: flex; flex-direction: column; gap: 16px; }
+
+.volume-row {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 10px 12px;
+}
+.vol-label { font-size: 13px; color: var(--text-secondary); white-space: nowrap; }
+.vol-slider {
+  flex: 1; height: 4px; -webkit-appearance: none;
+  background: var(--border); border-radius: 2px; outline: none; padding: 0; border: none;
+}
+.vol-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 14px; height: 14px;
+  background: var(--accent-green); border-radius: 50%; cursor: pointer;
+}
+.vol-val { font-size: 12px; color: var(--accent-green); font-weight: 700; width: 36px; text-align: right; }
+
+.mood-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.mood-tab {
+  padding: 5px 12px; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 100px; color: var(--text-secondary); font-size: 12px;
+  font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: var(--font-body);
+}
+.mood-tab:hover { border-color: var(--border-bright); color: var(--text-primary); }
+.mood-tab.active { background: rgba(0,255,135,0.1); border-color: var(--accent-green); color: var(--accent-green); }
+
+.tracks-list { display: flex; flex-direction: column; gap: 8px; }
+
+.track-item {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 10px 12px;
+  transition: border-color 0.2s;
+}
+.track-item:hover { border-color: var(--border-bright); }
+
+.track-play {
+  width: 32px; height: 32px; flex-shrink: 0;
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: 50%; color: var(--text-primary); font-size: 12px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.track-play:hover, .track-play.playing {
+  background: var(--accent-green); color: #070714; border-color: var(--accent-green);
+}
+
+.track-info { flex: 1; min-width: 0; }
+.track-name { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.track-meta { font-size: 11px; color: var(--text-muted); }
+.track-waveform { font-size: 14px; color: var(--accent-green); opacity: 0.6; letter-spacing: 2px; }
